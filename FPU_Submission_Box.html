@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+
+    main{
+
+        min-height: 100vh;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to right bottom, rgba(125,104,208,1) 50%, rgba(147,207,233,1) 88%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        background: linear-gradient(to top left, rgba(255,255,255, 0.25), rgba(255,255,255, 0.5));
+        min-height: 80vh;
+        min-width: 60%;
+        text-align: center;
+        border-radius: 2rem;
+        display: grid;
+    }
+
+    textarea{
+        resize: none;
+        overflow: auto;
+        border-radius: 0.5rem;
+        font-size: 20px;
+        margin: auto;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 80%;
+        padding: 5px;
+        border-width: medium;
+    }
+
+    .dropdown-content {
+        z-index: 1;
+        width: 40%;
+        height: 50px;
+        margin: auto;
+        border-width: medium;
+        font-size: 20px;
+    }
+
+    .dropdown-content a {
+
+
+        text-decoration: none;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    }
+
+    .dropdown-container{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+
+    input[type = "submit"]{
+        min-width: 50%;
+        min-height: 50px;
+        background: #6f4ba9;
+        margin: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+        color: white;
+        border: none;
+    }
+
+    .submit_container{
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    h1{
+        padding: 40px;
+        color: #522D8D;
+        font-family: 'Fira Sans', sans-serif;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+
+
+    form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+
+    }
+
+    .popup {
+        display: none;
+        width: 500px;
+        height: 25px;
+        background: #393b39;
+        color: white;
+        padding: 5px;
+    }
+
+</style>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>POLY SUGGEST</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<script>
+    $(document).ready(function() {
+
+        $('form').submit( function(event) {
+            var form = this;
+            event.preventDefault();
+
+            $(".popup").fadeIn(1000);
+
+            setTimeout( function () {
+                form.submit();
+            }, 2000);
+        });
+
+
+    });
+
+</script>
+
+<body>
+
+<main>
+    <div class="container">
+        <h1>FPU submission box</h1>
+        <form id = "form" method ="GET">
+
+            <div class="dropdown-container">
+                <select name ="dropdown" class="dropdown-content">
+                    <option value = "president@floridapoly.edu"> President</option>
+                    <option value = "sgapresident@floridapoly.edu"> SGA President</option>
+                    <option value = "StudentSuccessTech@RuffaloNL.com"> Office of the President</option>
+                </select>
+            </div>
+
+            <textarea id="subject" name="subject"  placeholder="Subject" required></textarea>
+
+
+            <textarea id="suggestion" name="suggestion" rows="10" cols="30" placeholder="Give your wonderful suggestion here...." style="resize: none" required></textarea><br>
+
+            <div class = "popup">Submission Completed</div>
+            <div class="submit_container"><input id = "Submit" type="submit" value="Submit"></div>
+        </form>
+    </div>
+
+</main>
+
+
+</body>
+</html>
