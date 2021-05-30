@@ -1,7 +1,5 @@
 # PolySuggest
-
-
-This is a basic app that allows users to sumbit issues and complaints annonomously to certain emails in florida polytechnic university.
+This is a basic app that allows users to submit issues and complaints anonymously to certain emails in Florida polytechnic university.
 
 
 #Home Page
