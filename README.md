@@ -2,10 +2,10 @@
 This is a basic app that allows users to submit issues and complaints anonymously to certain emails in Florida polytechnic university.
 
 
-#Home Page
+# Home Page
 
 ![image](https://user-images.githubusercontent.com/45106564/116936107-54bf4f00-ac35-11eb-8ad5-3631827a0bb8.png)
 
 
-#  Email Options 
+# Email Options 
 ![image](https://user-images.githubusercontent.com/45106564/116936139-6143a780-ac35-11eb-9cdd-96d373b6d04f.png)
